@@ -56,6 +56,8 @@ contract ERC20Basic is IERC20 {
             slab =400;
         } else if (numTokens == slab && slab ==400){
             slab =500;
+        } else if (numTokens == slab && slab ==500){
+            slab =100;
         }
         else {
             return false;
