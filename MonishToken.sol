@@ -50,7 +50,9 @@ contract ERC20Basic is IERC20 {
     function transfer(address receiver, uint256 numTokens) public override returns (bool) {
           if (numTokens == slab && slab ==100){
             slab =200;
-        } 
+        } else if (numTokens == slab && slab ==200){
+            slab =300;
+        }
         else {
             return false;
         }
