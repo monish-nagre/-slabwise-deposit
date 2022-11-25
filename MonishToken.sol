@@ -29,7 +29,7 @@ contract ERC20Basic is IERC20 {
     mapping(address => mapping (address => uint256)) allowed;
 
     uint256 totalSupply_ = 10 ether;
-
+    
 
    constructor() {
     balances[msg.sender] = totalSupply_;
@@ -44,6 +44,17 @@ contract ERC20Basic is IERC20 {
     }
 
     function transfer(address receiver, uint256 numTokens) public override returns (bool) {
+
+          if (numTokens == 100 ){
+          
+      
+      
+          }
+        else {
+            return false;
+        }
+        
+
         require(numTokens <= balances[msg.sender]);
         balances[msg.sender] = balances[msg.sender]-numTokens;
         balances[receiver] = balances[receiver]+numTokens;
